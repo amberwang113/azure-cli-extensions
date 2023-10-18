@@ -448,12 +448,6 @@ def update_auth_classic_settings(cmd, resource_group_name, name, enabled=None, a
     _generic_site_operation(cmd.cli_ctx, resource_group_name, name, 'update_auth_settings', slot, auth_settings)
     return None
 
-
-def _redact_auth_classic_settings(settings):
-    for setting in settings:
-        settings[setting] = None
-    return settings
-
 # endregion
 
 # region webapp auth microsoft
